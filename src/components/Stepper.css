@@ -1,0 +1,60 @@
+.stepper{
+    position: relative;
+    margin-top: 60px;
+}
+
+.line-hldr{
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 1%;
+}
+
+.filled-line{
+    width: 20%;
+    height: 2px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='8' stroke-dasharray='' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");    display: inline-block;
+    font-weight: bold;
+}
+
+.dotted-line{
+    width:26%;
+    height: 1px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='8' stroke-dasharray='6%2c25' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    display: inline-block;
+}
+.phases-hldr{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.phase-title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.phase-img-hldr{
+    margin: 30px auto;
+    width: 100px;
+}
+
+.phase-img{
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.phase-data{
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.phase-data-list{
+    padding: 0;
+}
+.phase-data-list ol{
+    padding: 0;
+}

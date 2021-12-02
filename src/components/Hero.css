@@ -1,0 +1,45 @@
+.main-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-sec{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-5%, -50%);
+    color: #ffffff;
+}
+
+.hero-text h1{
+    font-size: 6rem;
+    margin: 0;
+    text-align: right;
+    font-weight: bold;
+
+}
+.hero-text h2{
+    font-size: 3rem;
+    margin: 0;
+    text-align: right;
+    font-weight: bold;
+}
+.hero-text p{
+    margin: 0;
+    text-align: right;
+    font-size: 1.1rem;
+}
+
+.hero-btn-hldr{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.buy-hldr{
+    padding-right: 30px;
+}

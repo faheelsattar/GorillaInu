@@ -1,0 +1,36 @@
+.about{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 50px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img-hldr{
+    width: 50%;
+    margin: 0 0 0 auto;
+    display: block;
+}
+
+.about-img{
+    width: 100%;
+    margin: 0 0 0 auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.phil-hldr{
+    margin: 50px 0px;
+    background: linear-gradient(316.2deg, #6222F0 -12.65%, #7C41FF 136.68%);
+    padding: 40px 25px;
+    text-align: "center";
+    color: "#ffffff";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+}

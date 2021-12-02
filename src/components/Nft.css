@@ -1,0 +1,43 @@
+.nft{
+    padding: 50px;
+    background-color: #7038FF;
+}
+.nft-img-card{
+    width: 355px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.nft-img{
+    width: 355px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.nft-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nft-verified{
+    width: 15px;
+}
+
+.nft-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-nft-btn{
+    /* padding: 10px 20px; */
+    width: 100px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(130.63deg, #9A56FF -8.34%, #5123FF 120.05%);
+    border: none;
+    border-radius: 5px;
+}
