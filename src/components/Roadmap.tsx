@@ -1,15 +1,14 @@
-import React from "react";
-import "./Roadmap.css"
-import Stepper from "./Stepper";
+import React from 'react';
+import './Roadmap.css';
+import Stepper from './Stepper';
 
 const Roadmap = () => {
-    return (
-        <div className="roadmap">
-            <h1 className="roadmap-heading">Roadmap</h1>
+  return (
+    <div className="roadmap">
+      <h1 className="roadmap-heading">Roadmap</h1>
+      <Stepper />
+    </div>
+  );
+};
 
-            <Stepper />
-        </div>
-    )
-}
-
-export default Roadmap
+export default Roadmap;
