@@ -1,0 +1,31 @@
+.steps{
+    padding: 50px 50px;
+}
+
+.step-heading {
+  color: #ffffff;
+}
+
+.step-subheading {
+  color: #200164;
+  font-size: 0.8rem;
+}
+
+.step-text {
+  color: #b5c2c5;
+}
+
+.slider-image-hldr {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.slider-image {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+    .slider-image-hldr{
+        width: auto;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Stepper.css';
-import Bigwave from '../assets/roadmap/bigwave.svg';
+import Bigwave from '../../assets/roadmap/bigwave.svg';
 
 const Stepper = () => {
   const phases = [1, 2, 3].map((data) => {

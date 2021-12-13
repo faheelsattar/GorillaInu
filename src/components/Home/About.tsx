@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
-import Logo from "../assets/header/logo.svg";
-import background from "../assets/bg/secbg.png";
+import Logo from "../../assets/header/logo.svg";
+import background from "../../assets/bg/secbg.png";
 
 const About = () => {
   return (

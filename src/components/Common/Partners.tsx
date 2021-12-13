@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import "./Partners.css"
-import PartnersImage from '../assets/partners/partners.svg'
+import PartnersImage from '../../assets/partners/partners.svg'
 
 const Partners = () => {
     return (

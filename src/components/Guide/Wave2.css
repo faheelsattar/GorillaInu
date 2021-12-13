@@ -1,0 +1,14 @@
+.wave-hldr {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.wave2 {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .wave-hldr {
+    display: none;
+  }
+}

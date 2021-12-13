@@ -1,6 +1,6 @@
 import React from "react";
 import "./Curve.css";
-import background from "../assets/bg/secbg.png";
+import background from "../../assets/bg/secbg.png";
 
 const Curve = () => {
   return (

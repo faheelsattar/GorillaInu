@@ -1,0 +1,47 @@
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.mb-hldr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.topnav {
+  display: none;
+  overflow: hidden;
+  background-color: #a58fdd;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    display: block;
+  }
+}

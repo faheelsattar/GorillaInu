@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css"
-import background from "../assets/bg/mainbg.png";
-import Button from "./Button";
+import background from "../../assets/bg/mainbg.png";
+import Button from "../Common/Button";
 
 const Hero = () => {
     return (
