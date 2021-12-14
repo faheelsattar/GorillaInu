@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Common/Header";
 import Hero from "../components/Guide/Hero";
 import Steps from "../components/Guide/Steps";
 import StepImage from "../assets/steps/step.svg";

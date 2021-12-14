@@ -1,33 +1,27 @@
 import React from "react";
 import "./Tokenomics.css";
 import chart from "../../assets/tokenomics/chart.png";
+import { useQuery } from "@apollo/client";
+import { TOKENOMICS_QUERY } from "../../apollo/query";
 const Tokenomics = () => {
-  const tokenFeatures = [
-    { id: "1", color: "#151A20" },
-    { id: "2", color: "#151A20" },
-    { id: "3", color: "#151A20" },
-    { id: "4", color: "#3A0CA3" },
-    { id: "5", color: "#FFD600" },
-    { id: "6", color: "#F72585" },
-    { id: "7", color: "#00C5C9" },
-  ].map((data) => {
-    return (
-      <div className="token-box" style={{ borderLeftColor: data.color }}>
-        <h4>Lorem Ipsum</h4>
-        <p>Lorem ipsum dolor sit amet, consectetu</p>
-      </div>
-    );
-  });
+  const { loading, error, data } = useQuery(TOKENOMICS_QUERY);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+  const tokenFeatures = data.tokenomics[0].tokenFeatures.tokenomics.map(
+    (data: { color: string; heading: string; subheading: string }) => {
+      return (
+        <div className="token-box" style={{ borderLeftColor: data.color }}>
+          <h4>{data.heading}</h4>
+          <p>{data.subheading}</p>
+        </div>
+      );
+    }
+  );
   return (
     <div className="tokenomics">
       <div className="token-text">
         <h1> Tokenomics</h1>
-        <p>
-          GORILLA INUs mission is to bring cryptocurrency concepts to the masses
-          and help with adoption of blockchain services. Unlike other
-          cryptocurrencies the GORILLA INU will allocate 1% of the token supply
-          to donate to Gorilla protection organizations around the world.{" "}
-        </p>
+        <p>{data.tokenomics[0].tokenomicText}</p>
       </div>
       <div className="token">
         <p>Token name</p>
@@ -38,7 +32,11 @@ const Tokenomics = () => {
               <img src={chart} alt="chart" className="chart-img" />
             </div>
           </div>
-          <div className="col-md-6">{tokenFeatures}</div>
+          <div className="col-md-6">
+            {data.tokenomics[0].tokenFeatures.tokenomics.length > 0
+              ? tokenFeatures
+              : null}
+          </div>
         </div>
       </div>
     </div>

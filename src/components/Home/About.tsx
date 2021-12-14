@@ -2,17 +2,24 @@ import React from "react";
 import "./About.css";
 import Logo from "../../assets/header/logo.svg";
 import background from "../../assets/bg/secbg.png";
+import { useQuery } from "@apollo/client";
+import { ABOUT_QUERY } from "../../apollo/query";
 
 const About = () => {
+  const { loading, error, data } = useQuery(ABOUT_QUERY);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
   return (
     <div className="about" style={{ backgroundImage: `url(${background})` }}>
+      {console.log("about data", data)}
       <div className="row" style={{ paddingTop: "100px" }}>
         <div className="col-md-6 my-auto">
           <h1 style={{ color: "#ffffff" }}>
-            About <span style={{ color: "#7E42FF" }}>Gorilla Inu</span>
+            <span style={{ color: "#7E42FF" }}>{data.abouts[0].heading}</span>
           </h1>
           <p style={{ color: "#ffffff", fontSize: "1.1rem" }}>
-            GORILLA INUs mission is to bring cryptocurrency concepts to the
+            {/* GORILLA INUs mission is to bring cryptocurrency concepts to the
             masses and help with adoption of blockchain services. Unlike other
             cryptocurrencies the GORILLA INU will allocate{" "}
             <span style={{ color: "#7E42FF" }}>
@@ -21,7 +28,13 @@ const About = () => {
             </span>
             . The rug proof project has a strong and growing active community
             following and will be introducing next generation blockchain
-            concepts in the near future (more on that in the roadmap).
+            concepts in the near future (more on that in the roadmap). */}
+            {/* {
+              data.about[0].subtext
+            } */}
+            {
+              data.abouts[0].subtext
+            }
           </p>
         </div>
         <div className="col-md-6 my-auto">
@@ -34,11 +47,7 @@ const About = () => {
         <div>
           <h1 style={{ fontWeight: "bold" }}>Philosophy</h1>
           <p style={{ fontSize: "1.3rem" }}>
-            GORILLA INUs mission is to bring cryptocurrency concepts to the
-            masses and help with adoption of blockchain services. Unlike other
-            cryptocurrencies the GORILLA INU will allocate 1% of the token
-            supply to donate to Gorilla protection organizations around the
-            world.{" "}
+           { data.abouts[0].philosophy}
           </p>
         </div>
       </div>

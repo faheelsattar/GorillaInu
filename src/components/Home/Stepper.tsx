@@ -1,12 +1,53 @@
-import React from 'react';
-import './Stepper.css';
-import Bigwave from '../../assets/roadmap/bigwave.svg';
+import React from "react";
+import "./Stepper.css";
+import Bigwave from "../../assets/roadmap/bigwave.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import left from "../../assets/steps/left.png";
+import right from "../../assets/steps/right.png";
 
 const Stepper = () => {
-  const phases = [1, 2, 3].map((data) => {
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    nextArrow: <img src={right} style={{ width: "50px", height: "50px" }} />,
+    prevArrow: <img src={left} style={{ width: "50px", height: "50px" }} />,
+  };
+  const phases = [1, 2, 3, 4, 5, 6].map((data) => {
     return (
-      <div>
-        <p className="phase-title">Phase 1</p>
+      <div key={data}>
+        <p className="phase-title">Phase {data}</p>
         <div className="phase-img-hldr">
           <img className="phase-img" src={Bigwave} />
         </div>
@@ -32,7 +73,8 @@ const Stepper = () => {
         <hr className="dotted-line" />
         <hr className="dotted-line" />
       </div>
-      <div className="phases-hldr">{phases}</div>
+      {/* <div className="phases-hldr">{}</div> */}
+      <Slider {...settings}>{phases}</Slider>
     </div>
   );
 };

@@ -38,7 +38,13 @@
 .ft-circle {
   height: 70px;
   width: 70px;
-  background-color: #6d50b4;
+  border-radius: 50%;
+}
+
+.ft-circle-img{
+  height: 60px;
+  width: 60px;
+  display: block;
   border-radius: 50%;
 }
 

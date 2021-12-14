@@ -7,8 +7,13 @@ import Twitter from "../../assets/community/twitter.svg";
 import background from "../../assets/bg/secbg.png";
 import vector1 from "../../assets/bg/vector1.png";
 import vector2 from "../../assets/bg/vector2.png";
+import { useQuery } from "@apollo/client";
+import { COMMUNITY_QUERY } from "../../apollo/query";
 
 const Community = () => {
+  const { loading, error, data } = useQuery(COMMUNITY_QUERY);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
   const shareBtn = [
     { id: "1", icon: Reddit, name: "Join Reddit" },
     { id: "2", icon: Telegram, name: "Join Telegram" },
@@ -29,7 +34,10 @@ const Community = () => {
   });
   return (
     <>
-      <img src={vector1} style={{ width: "100%", display:"block", marginBottom:"-1px" }} />
+      <img
+        src={vector1}
+        style={{ width: "100%", display: "block", marginBottom: "-1px" }}
+      />
       <div
         className="community"
         style={{ backgroundImage: `url(${background})` }}
@@ -38,14 +46,16 @@ const Community = () => {
           <div className="community-text">
             <h1>Join our Community</h1>
             <p>
-              GORILLA INUs mission is to bring cryptocurrency concepts to the
-              masses and help with adoption of blockchain services.
+             {data.communities[0].communityText}
             </p>
           </div>
           <div className="row">{shareBtn}</div>
         </div>
       </div>
-      <img src={vector2} style={{ width: "100%", display:"block", marginTop:"-1px"}} />
+      <img
+        src={vector2}
+        style={{ width: "100%", display: "block", marginTop: "-1px" }}
+      />
     </>
   );
 };

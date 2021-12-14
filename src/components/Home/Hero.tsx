@@ -2,17 +2,20 @@ import React from "react";
 import "./Hero.css"
 import background from "../../assets/bg/mainbg.png";
 import Button from "../Common/Button";
+import { useQuery } from "@apollo/client";
+import { HERO_QUERY } from "../../apollo/query";
 
 const Hero = () => {
+    const { loading, error, data } = useQuery(HERO_QUERY);
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :(</p>;
     return (
         <div className="main-bg" style={{ backgroundImage: `url(${background})` }}>
             <div className="hero-sec">
                 <div className="hero-text">
-                    <h1>Gorrila Inu</h1>
-                    <h2>Saves Actual Gorillas</h2>
-                    <p>GORILLA INU was created on 21st October 2021 @ 10PM UTC with the</p>
-                    <p> goal of being a decentralized meme project with real world value.
-                    </p>
+                    <h1>{data.heroes[0].heading}</h1>
+                    <h2>{data.heroes[0].subheading}</h2>
+                    <p> {data.heroes[0].herotext}</p>
                 </div>
                 <div className="hero-btn-hldr">
                     <div className="buy-hldr">

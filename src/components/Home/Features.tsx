@@ -1,28 +1,36 @@
 import React from "react";
 import "./Features.css";
 import background from "../../assets/bg/3rdbg.png";
+import { useQuery } from "@apollo/client";
+import { FEATURE_QUERY } from "../../apollo/query";
 
 const Features = () => {
-  const feature = [1, 2, 3, 4].map((data) => {
-    return (
-      <div key={data} className="ft-box">
-        <div className="ft-circle"></div>
-        <p className="ft-box-text">adoption of blockchain service</p>
-      </div>
-    );
-  });
+  const { loading, error, data } = useQuery(FEATURE_QUERY);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+  const feature = data.features[0].featuresArray.features.map(
+    (data: { text: string; url: string }) => {
+      return (
+        <div className="ft-box">
+          <div className="ft-circle">
+            <img src={data.url} className="ft-circle-img" />
+          </div>
+          <p className="ft-box-text">{data.text}</p>
+        </div>
+      );
+    }
+  );
+
   return (
     <div className="features" style={{ backgroundImage: `url(${background})` }}>
       <div className="ft-text">
         <h1>Features</h1>
-        <p>
-          GORILLA INUs mission is to bring cryptocurrency concepts to the masses
-          and help with adoption of blockchain services. Unlike other
-          cryptocurrencies the GORILLA INU will allocate 1% of the token supply
-          to donate to Gorilla protection organizations around the world.{" "}
-        </p>
+        <p>{data.features[0].featureText}</p>
+        {console.log("feature", data.features[0].featuresArray.features)}
       </div>
-      <div className="ft-list">{feature}</div>
+      <div className="ft-list">
+        {data.features[0].featuresArray.features.length > 0 ? feature : null}
+      </div>
     </div>
   );
 };

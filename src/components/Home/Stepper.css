@@ -55,6 +55,11 @@
 .phase-data-list{
     padding: 0;
 }
+
+.phase-data-list ol{
+    width: fit-content;
+    margin: 0 auto;
+}
 .phase-data-list ol{
     padding: 0;
 }

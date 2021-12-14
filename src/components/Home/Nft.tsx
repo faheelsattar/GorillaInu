@@ -2,8 +2,13 @@ import React from "react";
 import "./Nft.css";
 import Banana from "../../assets/nft/banana.svg";
 import Verified from "../../assets/nft/verified.svg";
+import { useQuery } from "@apollo/client";
+import { NFT_QUERY } from "../../apollo/query";
 
 const Nft = () => {
+  const { loading, error, data } = useQuery(NFT_QUERY);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
   return (
     <div className="nft">
       <div className="row">
@@ -59,11 +64,7 @@ const Nft = () => {
           <h1 style={{ color: "#ffffff" }}> Nfts for Sale in GorillaInu.app</h1>
           <h1 style={{ color: "#ffffff", marginTop: "50px" }}> Nft Store</h1>
           <p style={{ color: "#ffffff" }}>
-            GORILLA INUs mission is to bring cryptocurrency concepts to the
-            masses and help with adoption of blockchain services. Unlike other
-            cryptocurrencies the GORILLA INU will allocate 1% of the token
-            supply to donate to Gorilla protection organizations around the
-            world.{" "}
+            {data.nfts[0].nftText}
           </p>
         </div>
       </div>
