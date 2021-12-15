@@ -10,27 +10,29 @@ const Partners = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <div className="partners">
-      <div className="row">
-        <div className="col-md-6 my-auto">
-          <h1 style={{ color: "#ffffff", fontWeight: "bold" }}>
-            Partners and Donations
-          </h1>
-          <p style={{ color: "#ffffff" }}>{data.partners[0].partnerText}</p>
-          <Button
-            filled={true}
-            onClick={false}
-            clickFunction={() => {}}
-            text="Donate Now"
-          />
-        </div>
-        <div className="col-md-6 my-auto">
-          <div className="partners-img-hldr">
-            <img className="partners-img" src={PartnersImage} />
+    <section id="partners-section">
+      <div className="partners">
+        <div className="row">
+          <div className="col-md-6 my-auto">
+            <h1 style={{ color: "#ffffff", fontWeight: "bold" }}>
+              Partners and Donations
+            </h1>
+            <p style={{ color: "#ffffff" }}>{data.partners[0].partnerText}</p>
+            <Button
+              filled={true}
+              onClick={false}
+              clickFunction={() => {}}
+              text="Donate Now"
+            />
+          </div>
+          <div className="col-md-6 my-auto">
+            <div className="partners-img-hldr">
+              <img className="partners-img" src={PartnersImage} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

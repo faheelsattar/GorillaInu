@@ -63,3 +63,55 @@ export const PARTNER_QUERY = gql`
     }
   }
 `;
+
+export const STEP1_QUERY = gql`
+  query step1Query {
+    step1S {
+      heading
+      subheading
+      steptext
+      images
+    }
+  }
+`;
+
+export const STEP2_QUERY = gql`
+  query step2Query {
+    step2S {
+      heading
+      subheading
+      steptext
+      images
+    }
+  }
+`;
+
+export const STEP3_QUERY = gql`
+  query step3Query {
+    step3S {
+      heading
+      subheading
+      steptext
+      images
+    }
+  }
+`;
+
+export const STEP4_QUERY = gql`
+  query step4Query {
+    step4S {
+      heading
+      subheading
+      steptext
+      images
+    }
+  }
+`;
+
+export const VIDEO_QUERY = gql`
+  query videoQuery {
+    videos {
+      src
+    }
+  }
+`;

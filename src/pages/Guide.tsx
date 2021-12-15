@@ -6,6 +6,10 @@ import Community from "../components/Common/Community";
 import Partners from "../components/Common/Partners";
 import Wave1 from "../components/Guide/Wave1";
 import Wave2 from "../components/Guide/Wave2";
+import Logo from "../assets/header/logo.svg";
+import { useNavigate } from "react-router-dom";
+import Uniswap from "../components/Guide/Uniswap";
+import Video from "../components/Guide/Video";
 
 const Guide = () => {
   type Image = {
@@ -17,6 +21,10 @@ const Guide = () => {
     { id: "1", src: StepImage },
     { id: "1", src: StepImage },
   ];
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate("/");
+  }
   return (
     <div
       style={{
@@ -24,6 +32,13 @@ const Guide = () => {
           "linear-gradient(130.63deg, #9A56FF -8.34%, #5123FF 120.05%)",
       }}
     >
+      <div
+        className="hdr-logo"
+        onClick={handleClick}
+        style={{ cursor: "pointer" }}
+      >
+        <img alt="" className="hdr-img" src={Logo} />
+      </div>
       <Hero />
       <Steps
         textLeft={true}
@@ -31,6 +46,7 @@ const Guide = () => {
         subHeading="Open Metamask extension"
         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
         picture={images}
+        step={1}
       />
       <Wave1 />
       <Steps
@@ -39,6 +55,7 @@ const Guide = () => {
         subHeading="Open Metamask extension"
         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
         picture={images}
+        step={2}
       />
       <Wave2 />
       <Steps
@@ -47,6 +64,7 @@ const Guide = () => {
         subHeading="Open Metamask extension"
         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
         picture={images}
+        step={3}
       />
       <Wave1 />
       <Steps
@@ -55,8 +73,10 @@ const Guide = () => {
         subHeading="Open Metamask extension"
         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry."
         picture={images}
+        step={4}
       />
-      <Wave2 />
+      <Video />
+      <Uniswap />
       <Community />
       <Partners />
     </div>

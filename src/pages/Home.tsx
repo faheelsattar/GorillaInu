@@ -15,13 +15,12 @@ const Home = () => {
     <div
       style={{
         background:
-          "linear-gradient(130.63deg, #9A56FF -8.34%, #5123FF 120.05%)",
+          "linear-gradient(316.2deg, #6222f0 -12.65%, #7c41ff 136.68%)",
       }}
     >
       <Header />
       <Hero />
       <About />
-      <Curve />
       <Features />
       <Tokenomics />
       <Community />

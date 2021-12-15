@@ -24,6 +24,7 @@
   display: block;
   margin: 0 auto;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .hdr-menu-list {
@@ -35,6 +36,7 @@
 .list-item {
   text-decoration: none;
   margin: 0 15px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

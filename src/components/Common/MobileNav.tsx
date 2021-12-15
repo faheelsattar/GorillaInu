@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MobileNav.css";
 import Logo from "../../assets/header/logo.svg";
+import { Link } from "react-scroll";
 
 const MobileNav = () => {
   const [toggle, setToggle] = useState(false);
@@ -19,12 +20,54 @@ const MobileNav = () => {
       </div>
       {toggle ? (
         <div id="myLinks">
-          <a href="#news">About us</a>
-          <a href="#contact">Features</a>
-          <a href="#about">Tokenomics</a>
-          <a href="#about">Roadmaps</a>
-          <a href="#about">Nft's</a>
-          <a href="#about">Partners</a>
+          <Link
+            to="about-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            About Us
+          </Link>
+          <Link
+            to="features-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            Features
+          </Link>
+          <Link
+            to="tokenomics-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            Tokenomics
+          </Link>
+          <Link
+            to="roadmap-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            Roadmap
+          </Link>
+          <Link
+            to="nft-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            Nft's
+          </Link>
+          <Link
+            to="partners-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            Partners
+          </Link>
         </div>
       ) : null}
     </div>

@@ -2,6 +2,8 @@ import React from "react";
 import "./Header.css";
 import Logo from "../../assets/header/logo.svg";
 import MobileNav from "./MobileNav";
+import { Link } from "react-scroll";
+
 const Header = () => {
   return (
     <div>
@@ -12,12 +14,54 @@ const Header = () => {
           </div>
           <div className="hdr-menu">
             <ul className="hdr-menu-list">
-              <li className="list-item">About Us</li>
-              <li className="list-item">Features</li>
-              <li className="list-item">Tokenomics</li>
-              <li className="list-item">Roadmap</li>
-              <li className="list-item">NFT's</li>
-              <li className="list-item">Partners</li>
+              <Link
+                className="list-item"
+                to="about-section"
+                smooth={true}
+                duration={1000}
+              >
+                About Us
+              </Link>
+              <Link
+                className="list-item"
+                to="features-section"
+                smooth={true}
+                duration={1000}
+              >
+                Features
+              </Link>
+              <Link
+                className="list-item"
+                to="tokenomics-section"
+                smooth={true}
+                duration={1000}
+              >
+                Tokenomics
+              </Link>
+              <Link
+                className="list-item"
+                to="roadmap-section"
+                smooth={true}
+                duration={1000}
+              >
+                Roadmap
+              </Link>
+              <Link
+                className="list-item"
+                to="nft-section"
+                smooth={true}
+                duration={1000}
+              >
+                Nft's
+              </Link>
+              <Link
+                className="list-item"
+                to="partners-section"
+                smooth={true}
+                duration={1000}
+              >
+                Partners
+              </Link>
             </ul>
           </div>
         </div>

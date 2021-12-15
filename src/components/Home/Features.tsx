@@ -22,16 +22,21 @@ const Features = () => {
   );
 
   return (
-    <div className="features" style={{ backgroundImage: `url(${background})` }}>
-      <div className="ft-text">
-        <h1>Features</h1>
-        <p>{data.features[0].featureText}</p>
-        {console.log("feature", data.features[0].featuresArray.features)}
+    <section id="features-section">
+      <div
+        className="features"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <div className="ft-text">
+          <h1>Features</h1>
+          <p>{data.features[0].featureText}</p>
+          {console.log("feature", data.features[0].featuresArray.features)}
+        </div>
+        <div className="ft-list">
+          {data.features[0].featuresArray.features.length > 0 ? feature : null}
+        </div>
       </div>
-      <div className="ft-list">
-        {data.features[0].featuresArray.features.length > 0 ? feature : null}
-      </div>
-    </div>
+    </section>
   );
 };
 

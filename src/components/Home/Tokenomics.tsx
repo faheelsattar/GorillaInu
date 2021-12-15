@@ -18,28 +18,30 @@ const Tokenomics = () => {
     }
   );
   return (
-    <div className="tokenomics">
-      <div className="token-text">
-        <h1> Tokenomics</h1>
-        <p>{data.tokenomics[0].tokenomicText}</p>
-      </div>
-      <div className="token">
-        <p>Token name</p>
-        <h3> GORINU</h3>
-        <div className="row">
-          <div className="col-md-6 my-auto">
-            <div className="chart-img-hldr">
-              <img src={chart} alt="chart" className="chart-img" />
+    <section id="tokenomics-section">
+      <div className="tokenomics">
+        <div className="token-text">
+          <h1> Tokenomics</h1>
+          <p>{data.tokenomics[0].tokenomicText}</p>
+        </div>
+        <div className="token">
+          <p>Token name</p>
+          <h3> GORINU</h3>
+          <div className="row">
+            <div className="col-md-6 my-auto">
+              <div className="chart-img-hldr">
+                <img src={chart} alt="chart" className="chart-img" />
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            {data.tokenomics[0].tokenFeatures.tokenomics.length > 0
-              ? tokenFeatures
-              : null}
+            <div className="col-md-6">
+              {data.tokenomics[0].tokenFeatures.tokenomics.length > 0
+                ? tokenFeatures
+                : null}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
