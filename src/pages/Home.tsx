@@ -14,8 +14,7 @@ const Home = () => {
   return (
     <div
       style={{
-        background:
-          "linear-gradient(316.2deg, #6222f0 -12.65%, #7c41ff 136.68%)",
+        background: "#8253FF",
       }}
     >
       <Header />

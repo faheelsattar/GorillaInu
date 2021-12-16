@@ -9,13 +9,15 @@ const Features = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   const feature = data.features[0].featuresArray.features.map(
-    (data: { text: string; url: string }) => {
+    (data: { text: string; url: string; link: string }) => {
       return (
         <div className="ft-box">
           <div className="ft-circle">
             <img src={data.url} className="ft-circle-img" />
           </div>
-          <p className="ft-box-text">{data.text}</p>
+          <a href={data.link} className="ft-box-text" target="_blank">
+            {data.text}
+          </a>
         </div>
       );
     }

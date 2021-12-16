@@ -7,16 +7,20 @@ const Video = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <div style={{ width: "50%", margin: "0 auto" }}>
-      <video
-        controls
-        crossOrigin="anonymous"
-        preload="auto"
-        width="100%"
-        height="264"
-      >
-        <source src={data.videos[0].src} type="video/mp4" />
-      </video>
+    <div className="row">
+      <div className="col-md-8 mx-auto">
+        <div
+          style={{ margin: "50px auto" }}
+          className="embed-responsive embed-responsive-16by9"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/gk6h2DwXPdQ"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };

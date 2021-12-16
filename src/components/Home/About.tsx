@@ -45,7 +45,9 @@ const About = () => {
         <div className="phil-hldr">
           <div>
             <h1 style={{ fontWeight: "bold" }}>Philosophy</h1>
-            <p style={{ fontSize: "1.3rem" }}>{data.abouts[0].philosophy}</p>
+            <p style={{ fontSize: "1.3rem", maxWidth: "60rem" }}>
+              {data.abouts[0].philosophy}
+            </p>
           </div>
         </div>
 
@@ -55,7 +57,7 @@ const About = () => {
             textAlign: "center",
             fontWeight: "bold",
             backgroundImage: `url(${background})`,
-            margin:"0"
+            paddingTop: "60px",
           }}
         >
           Apes Together Strong

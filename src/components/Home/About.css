@@ -10,7 +10,7 @@
 
 .about-img-hldr {
   width: 50%;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   display: block;
 }
 
@@ -22,9 +22,9 @@
 }
 
 .phil-hldr {
-  margin-left: 50px;
-  margin-right: 50px;
-margin-bottom: 10px;
+  width: fit-content;
+  margin: 40px auto;
+  margin-bottom: 10px;
   background: linear-gradient(316.2deg, #6222f0 -12.65%, #7c41ff 136.68%);
   padding: 40px 25px;
   text-align: "center";

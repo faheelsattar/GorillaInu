@@ -25,7 +25,7 @@
 .ft-box {
   border-radius: 4px;
   background: linear-gradient(316.2deg, #6222f0 -12.65%, #7c41ff 136.68%);
-  padding: 30px 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@
   border-radius: 50%;
 }
 
-.ft-circle-img{
+.ft-circle-img {
   height: 60px;
   width: 60px;
   display: block;
@@ -51,10 +51,13 @@
 .ft-box-text {
   margin-top: 15px;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
+.ft-box-text:hover {
+  color: #ffffff;
+}
 .ft-list {
   display: flex;
   justify-content: flex-end;
@@ -62,7 +65,7 @@
 }
 
 @media (max-width: 760px) {
-  .features{
+  .features {
     height: initial;
   }
   .ft-list {

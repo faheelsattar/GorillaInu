@@ -33,12 +33,13 @@ const Hero = () => {
             />
           </div>
           <div className="gor-hldr">
-            <Button
-              filled={false}
-              onClick={false}
-              clickFunction={() => {}}
-              text="Gorilla Paper"
-            />
+            <a
+              className="link-outlined"
+              href="https://test.gorilla.financial/docs/Whitepaper_V1.0.pdf"
+              target="_blank"
+            >
+              Gorilla Paper
+            </a>
           </div>
         </div>
       </div>

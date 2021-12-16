@@ -23,7 +23,7 @@ const Community = () => {
     return (
       <div className="col-md-3 mx-auto">
         <button className="share-btn">
-          <div style={{ width: "30px" }}>
+          <div style={{ width: "30px", marginRight:"10px" }}>
             {" "}
             <img src={data.icon} alt="" style={{ width: "100%" }} />
           </div>
