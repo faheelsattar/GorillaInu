@@ -30,12 +30,13 @@
   align-items: center;
 }
 
-.buy-nft-btn {
-  /* padding: 10px 20px; */
+a.buy-nft-btn {
+  padding: 5px 20px;
   width: 100px;
   text-align: center;
   color: #ffffff;
   background: linear-gradient(130.63deg, #9a56ff -8.34%, #5123ff 120.05%);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }

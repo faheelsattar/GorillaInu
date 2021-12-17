@@ -13,6 +13,7 @@
 
 .step-text {
   color: #b5c2c5;
+  word-break: break-all;
 }
 
 .slider-image-hldr {

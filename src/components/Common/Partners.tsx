@@ -4,8 +4,13 @@ import "./Partners.css";
 import PartnersImage from "../../assets/partners/partners.svg";
 import { useQuery } from "@apollo/client";
 import { PARTNER_QUERY } from "../../apollo/query";
+import { useNavigate } from "react-router-dom";
 
 const Partners = () => {
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate("/buy");
+  }
   const { loading, error, data } = useQuery(PARTNER_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -21,7 +26,7 @@ const Partners = () => {
             <Button
               filled={true}
               onClick={false}
-              clickFunction={() => {}}
+              clickFunction={handleClick}
               text="Donate Now"
             />
           </div>

@@ -41,20 +41,26 @@ const Nft = () => {
                   <img className="nft-verified" src={Verified} />
                 </div>
                 <h3 style={{ fontWeight: "bold", color: "#ffffff" }}>
-                  Banana for Gorilla
+                  Official Gorilla Inu NFTs
                 </h3>
                 <div className="nft-footer">
                   <div>
-                    <button className="buy-nft-btn">Buy Now</button>
+                    <a
+                      className="buy-nft-btn"
+                      href="https://opensea.io/GorillaInuOfficial"
+                      target="_blank"
+                    >
+                      Buy Now
+                    </a>
                   </div>
                   <div>
                     <p style={{ color: "#ffffff", margin: "0" }}>
                       {" "}
                       <span style={{ color: "#9B9B9B", fontSize: "0.8rem" }}>
                         {" "}
-                        $135.4{" "}
+                        {/*price in usd*/}
                       </span>{" "}
-                      0.37 ETH
+                      {/*price in eth*/}
                     </p>
                   </div>
                 </div>

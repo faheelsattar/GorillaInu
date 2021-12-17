@@ -52,6 +52,12 @@ const MobileNav = () => {
           >
             Roadmap
           </Link>
+          <a
+            href="https://github.com/TechRate/Smart-Contract-Audits/blob/main/November/Gorilla%20Inuvv.pdf"
+            target="_blank"
+          >
+            Audit
+          </a>
           <Link
             to="nft-section"
             smooth={true}
@@ -59,6 +65,14 @@ const MobileNav = () => {
             onClick={handleToggle}
           >
             Nft's
+          </Link>
+          <Link
+            to="metaverse-section"
+            smooth={true}
+            duration={1000}
+            onClick={handleToggle}
+          >
+            Metaverse
           </Link>
           <Link
             to="partners-section"

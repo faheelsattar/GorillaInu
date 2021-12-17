@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Guide/Hero";
 import Steps from "../components/Guide/Steps";
 import StepImage from "../assets/steps/step.svg";
@@ -10,8 +10,12 @@ import Logo from "../assets/header/logo.svg";
 import { useNavigate } from "react-router-dom";
 import Uniswap from "../components/Guide/Uniswap";
 import Video from "../components/Guide/Video";
+import Footer from "../components/Common/Footer";
 
 const Guide = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   type Image = {
     id: string;
     src: string;
@@ -28,8 +32,7 @@ const Guide = () => {
   return (
     <div
       style={{
-        background:
-          "linear-gradient(130.63deg, #9A56FF -8.34%, #5123FF 120.05%)",
+        background: "#8253FF",
       }}
     >
       <div
@@ -79,6 +82,7 @@ const Guide = () => {
       <Uniswap />
       <Community />
       <Partners />
+      <Footer />
     </div>
   );
 };

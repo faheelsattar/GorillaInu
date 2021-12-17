@@ -39,6 +39,16 @@
   cursor: pointer;
 }
 
+a.list-item{
+  text-decoration: none;
+  margin: 0 15px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+a.list-item :hover{
+  color: #ffffff;
+}
 @media (max-width: 768px) {
   .hdr-main {
     display: none;

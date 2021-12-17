@@ -15,20 +15,39 @@ const Community = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   const shareBtn = [
-    { id: "1", icon: Reddit, name: "Join Reddit" },
-    { id: "2", icon: Telegram, name: "Join Telegram" },
-    { id: "3", icon: Twitter, name: "Join Twitter" },
-    { id: "4", icon: Discord, name: "Join Discord" },
+    {
+      id: "1",
+      icon: Reddit,
+      name: "Join Reddit",
+      href: "https://www.reddit.com/r/GorillaInu_Official",
+    },
+    {
+      id: "2",
+      icon: Telegram,
+      name: "Join Telegram",
+      href: "https://t.me/GorillaInuOfficial",
+    },
+    {
+      id: "3",
+      icon: Twitter,
+      name: "Join Twitter",
+      href: "https://twitter.com/gorilla_inu",
+    },
+    {
+      id: "4",
+      icon: Discord,
+      name: "Join Discord",
+      href: "https://discord.gg/qNbQq9Pe5c",
+    },
   ].map((data) => {
     return (
       <div className="col-md-3 mx-auto">
-        <button className="share-btn">
-          <div style={{ width: "30px", marginRight:"10px" }}>
-            {" "}
+        <a className="share-btn" href={data.href} target="_blank">
+          <div style={{ width: "30px", marginRight: "10px" }}>
             <img src={data.icon} alt="" style={{ width: "100%" }} />
           </div>
           {data.name}
-        </button>
+        </a>
       </div>
     );
   });
@@ -45,9 +64,7 @@ const Community = () => {
         <div className="community-main">
           <div className="community-text">
             <h1>Join our Community</h1>
-            <p>
-             {data.communities[0].communityText}
-            </p>
+            <p>{data.communities[0].communityText}</p>
           </div>
           <div className="row">{shareBtn}</div>
         </div>

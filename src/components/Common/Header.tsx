@@ -46,6 +46,13 @@ const Header = () => {
               >
                 Roadmap
               </Link>
+              <a
+                className="list-item"
+                href="https://github.com/TechRate/Smart-Contract-Audits/blob/main/November/Gorilla%20Inuvv.pdf"
+                target="_blank"
+              >
+                Audit
+              </a>
               <Link
                 className="list-item"
                 to="nft-section"
@@ -53,6 +60,14 @@ const Header = () => {
                 duration={1000}
               >
                 Nft's
+              </Link>
+              <Link
+                className="list-item"
+                to="metaverse-section"
+                smooth={true}
+                duration={1000}
+              >
+                Metaverse
               </Link>
               <Link
                 className="list-item"

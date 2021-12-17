@@ -19,7 +19,7 @@
   color: #ffffff;
 }
 
-.share-btn {
+a.share-btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,6 +28,8 @@
   padding: 10px 10px;
   border-radius: 4px;
   margin: 10px auto;
+  background-color: #ffffff;
+  width: fit-content;
 }
 
 .share-icon {
