@@ -64,7 +64,7 @@ const MobileNav = () => {
             duration={1000}
             onClick={handleToggle}
           >
-            Nft's
+            NFT's
           </Link>
           <Link
             to="metaverse-section"

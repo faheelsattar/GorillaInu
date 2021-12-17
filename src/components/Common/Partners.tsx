@@ -1,7 +1,9 @@
 import React from "react";
 import Button from "./Button";
 import "./Partners.css";
-import PartnersImage from "../../assets/partners/partners.svg";
+// import PartnersImage from "../../assets/partners/partners.svg";
+import PartnersImage from "../../assets/partners/partners.png";
+
 import { useQuery } from "@apollo/client";
 import { PARTNER_QUERY } from "../../apollo/query";
 import { useNavigate } from "react-router-dom";

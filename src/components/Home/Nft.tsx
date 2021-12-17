@@ -36,7 +36,7 @@ const Nft = () => {
                       margin: "0 10px 0 0",
                     }}
                   >
-                    The Gorilla-inu
+                    GorillaInuOfficial
                   </p>
                   <img className="nft-verified" src={Verified} />
                 </div>
@@ -68,10 +68,7 @@ const Nft = () => {
             </div>
           </div>
           <div className="col-md-6 my-auto">
-            <h1 style={{ color: "#ffffff" }}>
-              {" "}
-              Nfts for Sale in GorillaInu.app
-            </h1>
+            <h1 style={{ color: "#ffffff" }}> Live on 25th December 2021</h1>
             <h1 style={{ color: "#ffffff", marginTop: "50px" }}> Nft Store</h1>
             <p style={{ color: "#ffffff" }}>{data.nfts[0].nftText}</p>
           </div>

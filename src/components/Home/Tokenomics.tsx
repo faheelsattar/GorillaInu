@@ -10,7 +10,7 @@ const Tokenomics = () => {
       "https://api.coingecko.com/api/v3/simple/price?ids=gorilla-inu&vs_currencies=usd"
     );
     const result = await price.json();
-    const dollar = result["gorilla-inu"].usd.toFixed(15);
+    const dollar = result["gorilla-inu"].usd.toFixed(12);
     setPrice(dollar);
   };
   useEffect(() => {

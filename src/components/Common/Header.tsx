@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
-import Logo from "../../assets/header/logo.svg";
+// import Logo from "../../assets/header/logo.svg";
+import Logo from "../../assets/header/logo.png";
+
 import MobileNav from "./MobileNav";
 import { Link } from "react-scroll";
 
@@ -59,7 +61,7 @@ const Header = () => {
                 smooth={true}
                 duration={1000}
               >
-                Nft's
+                NFT's
               </Link>
               <Link
                 className="list-item"
